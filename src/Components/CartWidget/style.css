@@ -1,0 +1,24 @@
+.trolley{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    display: flex;
+    position: relative;
+    height: 50px;
+    padding-right: 12px;
+}
+
+.number{
+    display: flex;
+    position: absolute;
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+}

@@ -1,6 +1,6 @@
 import './style.css';
 import { useContext, useState } from 'react';
-import { contexto } from './CustomProvider';
+import { contexto } from '../CustomProvider/CustomProvider';
 import { Offcanvas} from 'react-bootstrap';
 
 

@@ -1,0 +1,44 @@
+
+.item {
+    position: relative;
+    margin: 40px 22px 16px 22px;
+    border-radius: 8px;
+    padding: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.info {
+    border-top: 4px solid #007894;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+h2 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.info-price {
+    display: flex;
+    align-items: center;
+}
+
+.info-price h5 {
+    font-size: 15px;
+    margin-left: 10px;
+    background-color: #007894;
+    padding: 4px;
+    border-radius: 8px;
+    color: white;
+}
+
+.item img {
+    border-radius: 8px;
+}
+
+.item:hover {
+    box-shadow: 3px 3px 1px 1px #007894;
+}

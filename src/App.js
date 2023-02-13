@@ -2,11 +2,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nos from "./Components/Nosotros";
-import MyNavbar from "./Components/NavBar.jsx";
-import  ItemListContainer from "./Components/ItemListContainer.jsx";
-import ItemDetailContainer from "./Components/ItemDetailContainer";
-import CartProvider from "./Components/CustomProvider";
-// import Cart from "./Components/Cart/Cart";
+import MyNavbar from "./Components/NavBar/NavBar";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
+import CartProvider from "./Components/CustomProvider/CustomProvider";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
+
 
 const App = () => {
   return (
