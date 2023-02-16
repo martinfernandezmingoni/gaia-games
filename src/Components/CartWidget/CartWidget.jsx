@@ -2,6 +2,7 @@ import './style.css';
 import { useContext, useState } from 'react';
 import { context } from '../Context/CustomProvider';
 import { Offcanvas} from 'react-bootstrap';
+import Cart from "../Cart/Cart"
 
 
 
@@ -9,10 +10,13 @@ import { Offcanvas} from 'react-bootstrap';
 
 export default function CartWidget (){
     const icono = 'https://res.cloudinary.com/dmthbi3ny/image/upload/v1675636151/proyecto%20Reactjs/carrito_gfykkr.png' ;
-    const {quantity} = useContext (context);
+    const {quantity, addProduct} = useContext (context);
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false)
+    const [cartItems, setCartItems] = useState([])
+   
+
 
     return (
         <>
@@ -27,7 +31,7 @@ export default function CartWidget (){
                 <Offcanvas.Title>Carrito</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-                <p>Hola</p>
+                <Cart cartItems = {cartItems} />
             </Offcanvas.Body>
         </Offcanvas>
         
