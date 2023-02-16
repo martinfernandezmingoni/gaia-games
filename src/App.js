@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nos from "./Components/Nosotros";
 import MyNavbar from "./Components/NavBar/NavBar";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
-import CartProvider from "./Components/CustomProvider/CustomProvider";
+import CartProvider from "./Components/Context/CustomProvider";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
 
 

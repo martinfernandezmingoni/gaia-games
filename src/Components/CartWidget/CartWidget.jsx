@@ -1,6 +1,6 @@
 import './style.css';
 import { useContext, useState } from 'react';
-import { contexto } from '../CustomProvider/CustomProvider';
+import { context } from '../Context/CustomProvider';
 import { Offcanvas} from 'react-bootstrap';
 
 
@@ -9,7 +9,7 @@ import { Offcanvas} from 'react-bootstrap';
 
 export default function CartWidget (){
     const icono = 'https://res.cloudinary.com/dmthbi3ny/image/upload/v1675636151/proyecto%20Reactjs/carrito_gfykkr.png' ;
-    const {cantidad} = useContext (contexto);
+    const {quantity} = useContext (context);
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false)
@@ -19,7 +19,7 @@ export default function CartWidget (){
         
             <div onClick={handleShow} className='trolley'>
                 <img className='icon' src={icono} alt="Carrito" />
-                <span className="number">{cantidad}</span>
+                <span className="number">{quantity}</span>
             </div>
         
         <Offcanvas show={show} onHide={handleClose} placement="end">

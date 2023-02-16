@@ -1,0 +1,86 @@
+.container-detail1 {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.container-detail1 img {
+  width: 500px;
+  border-radius: 5px;
+  height: 500px;
+}
+
+.container-detail1 article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.container-detail1 article h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.container-detail1 article h4 {
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #007894;
+  color: white;
+  border-radius: 8px;
+  padding: 6px;
+  display: inline-block;
+  text-align: center;
+  width: 70px;
+}
+
+.container-detail1 article .info-span {
+  color: rgb(119, 119, 119);
+  font-size: 12px;
+  margin-left: 0px;
+}
+
+.container-detail1 article .cuotas {
+  color: rgb(119, 119, 119);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container-detail1 article .cuotas strong {
+  color: black;
+  font-weight: 600;
+}
+
+.container-detail1 article section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.container-detail1 article section h3 {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+.container-detail1 article section h5 {
+  color: rgba(252, 102, 102, 0.717);
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.container-detail1 article .metodos-pagos {
+  border: 2px solid #007894;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background-color: white;
+  font-size: 12px;
+  color: #007894;
+  font-weight: 600;
+}
+
+
+.container-page1 {
+  max-width: 1024px;
+  margin: 0 auto;
+}
