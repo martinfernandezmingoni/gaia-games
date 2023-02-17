@@ -1,31 +1,20 @@
-import {useState} from 'react';
+import { useContext } from 'react';
 import './style.css'
+import {context} from "../Context/CustomProvider"
+import { Button } from 'react-bootstrap';
 
-const Counter = ({stock, handleAdd}) => {
-    const [quantity, setQuantity] = useState(0);
+function Counter ({id, stock}) {
+    const {getItemQuantity, increaseQuantity, decreaseQuantity, removeFromCart} = useContext(context) 
+    const quantity = getItemQuantity
+    
 
-    const sumar = () =>{
-        if (quantity < stock){
-            setQuantity(quantity + 1);
-        }
-    };
-     const restar = () => {
-        if (quantity > 1){
-            setQuantity(quantity -1);
-        }
-     };
-
-     const confirm = () => {
-        handleAdd(quantity)
-     }
      return(
         <div className='container-counter'>
             <div  className='counter'>
-                <button onClick={restar}>-</button>
-                <p className='qantity'>{quantity}</p>
-                <button disabled={quantity === stock} onClick={sumar}>+</button>
-                <button className='add-to-cart' onClick={confirm}>Confirmar Productos</button>
-                
+                <Button onClick={decreaseQuantity}>-</Button>
+                <span className='fs-3'>{quantity}</span>
+                <Button disabled={quantity === stock} onClick={increaseQuantity}>+</Button>
+                <Button variant='danger' size='sm' onClick={removeFromCart}>Confirmar Productos</Button>
             </div>
             
         </div>

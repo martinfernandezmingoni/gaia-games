@@ -47,8 +47,8 @@ const ItemDetail = ({item}) => {
                     Conocé todos los métodos de pagos
                 </button> */}
                 <hr />
-                <Counter stock={item.stock} handleAdd={handleAdd}/>
-                {confirm && <button onClick={getProduct}>Agregar al Carrito</button>}
+                <Counter stock={item.stock}/>
+              
             </article>
         </div>
     );

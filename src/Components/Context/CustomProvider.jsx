@@ -13,6 +13,7 @@ const CartProvider = ({ children }) =>{
     const closeCart = () => setIsOpen(false)
     function getItemQuantity(id){
         return cartItems.find(item =>item.id === id)?.quantity || 0}
+        
         function increaseQuantity(id){
             setCartItems(currItems => {
                 if (currItems.find(item => item.id === id) == null){
@@ -30,8 +31,8 @@ const CartProvider = ({ children }) =>{
         }
         function decreaseQuantity(id){
             setCartItems(currItems => {
-                if (currItems.find(item => item.id === id) == null){
-                    return [...currItems, {id, quantity: 1}]
+                if (currItems.find(item => item.id === id)?.quantity === 1){
+                    return currItems.filter(item => item.id !== id)
                 }else {
                     return currItems.map(item => {
                         if (item.id === id){

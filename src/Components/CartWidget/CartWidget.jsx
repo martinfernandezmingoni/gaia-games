@@ -10,7 +10,7 @@ import Cart from "../Cart/Cart"
 
 export default function CartWidget (){
     const icono = 'https://res.cloudinary.com/dmthbi3ny/image/upload/v1675636151/proyecto%20Reactjs/carrito_gfykkr.png' ;
-    const {quantity, addProduct} = useContext (context);
+    const {cartQuantity, getItemQuantity} = useContext (context);
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false)
@@ -23,7 +23,7 @@ export default function CartWidget (){
         
             <div onClick={handleShow} className='trolley'>
                 <img className='icon' src={icono} alt="Carrito" />
-                <span className="number">{quantity}</span>
+                <span className="number">{cartQuantity}</span>
             </div>
         
         <Offcanvas show={show} onHide={handleClose} placement="end">
